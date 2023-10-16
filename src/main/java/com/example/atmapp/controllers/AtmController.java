@@ -21,7 +21,7 @@ public class AtmController {
     private AtmService atmService;
     private ReceiptService receiptService;
 
-    @PostMapping("/checkbalance")
+    @GetMapping("/checkbalance")
     public ResponseEntity<Long> getBalance(@RequestParam Long id) throws IOException {
 
         return ResponseEntity.ok().body(atmService.getBalance(id));
